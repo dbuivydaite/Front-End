@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Menu</title>
+    <style>
+        body {
+            background: rgb(40, 40, 40);
+        }
+        nav {
+            margin-top: 300px;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 50px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: arial;
+            font-size: 2em;
+            position: relative;
+        }
+        nav a::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            height: 35px;
+            background: red;
+            animation-name: out;
+            animation-duration: 0.5s;
+        }
+        nav a:hover::before {
+            animation-name: in;
+            animation-duration: 0.5s;
+        }
+        @keyframes in {
+            0% {width: 0%}
+            50% {left: 0px; width: 100%}
+            100% {left: 100%; width: 0%}
+        }
+        @keyframes out {
+            0% {left: 100%; width: 0%}
+            50% {left: 0px; width: 100%}
+            100% {width: 0%}
+        }
+        nav a::after {
+            content: "";
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            width: 0px;
+            height: 5px;
+            background: red;
+            transition: 0.5s;
+            transition-delay: 0.5s;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table 2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+        table,th,td {
+            border: 2px solid white;
+            border-collapse: collapse;
+            font-family: Ubuntu;
+            color: white;
+            text-align: left;
+        }
+
+        th,td {
+            padding: 12px;
+            min-width: 100px;
+        }
+
+        th {
+            background-color: #86006f;
+            font-size: 18px;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f37ecf;
+        }
+
+        tr:nth-child(even) {
+            background-color: #af5593;
+        }
+
+        td:first-of-type {
+            padding-right: 50px;
+        }
+
+        td:last-of-type {
+            padding-right: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Telephone</th>
+                <th>Hobby</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Bill Gates</td>
+                <td>71577854</td>
+                <td>85577855</td>
+                <td>Reading</td>
+            </tr>
+            <tr>
+                <td>Steve Jobs</td>
+                <td>86677454</td>
+                <td>10557861</td>
+                <td>Playing guitar</td>
+            </tr>
+            <tr>
+                <td>Elion Musk</td>
+                <td>75517254</td>
+                <td>93527655</td>
+                <td>Gaming</td>
+            </tr>
+            <tr>
+                <td>Marck Zuckerberg</td>
+                <td>10557861</td>
+                <td>85577588</td>
+                <td>Travel</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

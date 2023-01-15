@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table 3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap');
+
+        table,td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            font-family: JetBrains Mono;
+            text-align: left;
+            padding: 6px;
+            font-weight: bold;
+            min-width: 280px;
+        }
+
+        .fc-white {
+            color: white;
+        }
+
+        .bc-orange {
+            background-color: orange;
+        }
+
+        .bc-blue {
+            background-color: royalblue;
+        }
+
+        .bc-green {
+            background-color: mediumseagreen;
+        }
+
+        td:last-of-type {
+            font-weight: normal;
+            min-width: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+            <tr>
+                <td>Vardas:</td>
+                <td>Jonas Žirmūnas</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Telefono numeris:</td>
+                <td>55577854</td>
+            </tr>
+            <tr>
+                <td>55577855</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Mėgstamiausios spalvos</td>
+                <td class="fc-white bc-orange ">Oranžinė</td>
+            </tr>
+            <tr>
+                <td class="fc-white bc-blue">Mėlyna</td>
+            </tr>
+            <tr>
+                <td class="fc-white bc-green">Žalia</td>
+            </tr>
+    </table>
+</body>
+
+</html>
