@@ -1,1 +1,7 @@
 /Pamokų medžiaga/
+**/node_modules/
+package.json
+package-lock.json
+gulpfile.js
+design.png
+mobile.png
