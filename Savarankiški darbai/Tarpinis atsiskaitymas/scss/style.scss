@@ -1,29 +1,30 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+$colorBlue: #007bff;
+
+* {
+  font: 20px Lato;
+  background-color: #f8f9fa;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  // box-sizing: border-box;
+}
+
+nav {
   display: flex;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: auto;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-}
+  padding: 8px 30px;
+  // border: 1px solid red;
 
-.img {
-  background: url(../images/gulp.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 150px;
-  width: 75px;
-  animation: spin 5s infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(2);
-  }
-
-  100% {
-    transform: rotate(360deg) scale(1)
+  button {
+    font-size: 16px;
+    padding: 10px 14px;
+    color: white;
+    background-color: $colorBlue;
+    border-radius: 4px;
   }
 }
