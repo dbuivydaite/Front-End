@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 1.5em;
+    font-family: system-ui;
+    
+}
+
+.flex {
+    display: flex;
+    color: white;
+    height: 35vh;
+    width: 1000px;
+    gap: 20px;
+    padding: 20px 5vw;
+}
+
+.flex .left,
+.flex .right>* {
+    background-color: red;
+}
+
+.flex>* {
+    flex: 1;
+}
+
+.flex .right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flex .top {
+    width: 100%;
+}
+
+.flex .bottom {
+    flex: 1;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 490px 235px 235px;
+    height: 35vh;
+    gap: 20px;
+    width: 1000px;
+    padding: 0 5vw;
+}
+
+.grid > * {
+    background-color: lightblue;
+}
+
+.grid .left {
+    grid-row: span 2;
+}
+
+.grid .top {
+    grid-column: span 2;
+}
+
+/* General text alignment */
+
+div {
+    position: relative;
+}
+
+ p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ .left p {
+    top: 25%;
+}
