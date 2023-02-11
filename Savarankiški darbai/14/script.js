@@ -30,5 +30,5 @@ function deleteRowAtIndex(index) {
         alert("Nebėra ką trinti :)")
     }
 }
-deleteFirst.addEventListener("click", () => {deleteRowAtIndex(0)})
-deleteLast.addEventListener("click",  () => {deleteRowAtIndex(-1)})
+deleteFirst.addEventListener("click", () => deleteRowAtIndex(0))
+deleteLast.addEventListener("click",  () => deleteRowAtIndex(-1))
