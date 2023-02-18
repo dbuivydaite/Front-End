@@ -8,18 +8,30 @@
   <link rel="stylesheet" href="app/css/style.css">
 </head>
 <body class="container">
-    <div class="components">  
+    <div class="components">
       <div class="segmented-control">
-        <input type="radio" name="radio" value="1" id="tab1" checked/>
-        <label for="tab1" class= "segmented-control_1"><p>Tab 1</p></label>
-        
-        <input type="radio" name="radio" value="2" id="tab2" />
-        <label for="tab2" class= "segmented-control_2"><p>Tab 2</p></label>
-        
-        <input type="radio" name="radio" value="3" id="tab3" />
-        <label for="tab3" class= "segmented-control_3"><p>Tab 3</p></label>
+        <input onclick="showTab('content1')" type="radio" name="radio" value="1" id="tab1" checked/>
+        <label for="tab1" class= "segmented-control_1"><p>Destination 1</p></label>
+        <input onclick="showTab('content2')" type="radio" name="radio" value="2" id="tab2" />
+        <label for="tab2" class= "segmented-control_2"><p>Destination 2</p></label>
+        <input onclick="showTab('content3')" type="radio" name="radio" value="3" id="tab3" />
+        <label for="tab3" class= "segmented-control_3"><p>Destination 3</p></label>
         <div class="segmented-control__color"></div>
       </div>
+      <div class="tabs">
+        <div class="tab" id="content1">
+          <img src="./app/images/Sala1.jpg" alt="Sala">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quaerat dolorem saepe earum eligendi, sint porro praesentium nobis recusandae neque facere voluptatem dicta nam officia, illo at animi reprehenderit reiciendis quo a minima? Voluptatum omnis iusto sequi porro doloremque tempora dolore illum placeat sapiente eaque aperiam, earum quaerat? Itaque est, velit repudiandae aliquid sint explicabo esse nam, porro, odio quisquam ipsa voluptas! Voluptate ab, cumque dignissimos neque, sit fugit molestias inventore voluptatum provident est incidunt magnam consequuntur similique rem nemo libero ex quae? Excepturi et, asperiores cumque quasi culpa corporis laboriosam aperiam sunt laborum autem beatae nobis, tempora ratione itaque.</p>
+        </div>
+        <div class="tab" id="content2">
+          <img src="./app/images/Sala2.jpg" alt="Sala">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quaerat dolorem saepe earum eligendi, sint porro praesentium nobis recusandae neque facere voluptatem dicta nam officia, illo at animi reprehenderit reiciendis quo a minima? Voluptatum omnis iusto sequi porro doloremque tempora dolore illum placeat sapiente eaque aperiam, earum quaerat? Itaque est, velit repudiandae aliquid sint explicabo esse nam, porro, odio quisquam ipsa voluptas! Voluptate ab, cumque dignissimos neque, sit fugit molestias inventore voluptatum provident est incidunt magnam consequuntur similique rem nemo libero ex quae? Excepturi et, asperiores cumque quasi culpa corporis laboriosam aperiam sunt laborum autem beatae nobis, tempora ratione itaque.</p>
+        </div>
+        <div class="tab" id="content3">
+          <img src="./app/images/Sala3.jpg" alt="Sala">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quaerat dolorem saepe earum eligendi, sint porro praesentium nobis recusandae neque facere voluptatem dicta nam officia, illo at animi reprehenderit reiciendis quo a minima? Voluptatum omnis iusto sequi porro doloremque tempora dolore illum placeat sapiente eaque aperiam, earum quaerat? Itaque est, velit repudiandae aliquid sint explicabo esse nam, porro, odio quisquam ipsa voluptas! Voluptate ab, cumque dignissimos neque, sit fugit molestias inventore voluptatum provident est incidunt magnam consequuntur similique rem nemo libero ex quae? Excepturi et, asperiores cumque quasi culpa corporis laboriosam aperiam sunt laborum autem beatae nobis, tempora ratione itaque.</p>
+        </div>
+    </div>
   <script src="script.js"></script>
 </body>
 </html>
