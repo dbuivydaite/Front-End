@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +9,53 @@
   <link rel="icon" type="image/x-icon" href="app/images/CCHS_logo.svg">
   <link rel="stylesheet" href="app/css/style.css">
 </head>
+
 <body>
- <nav>
-  <div class="nav-content">
-    <img src="app/images/CCHS.svg" alt="Cheshire County Hygiene Services logo">
-    <div class="nav-buttons">
-      <button>Features</button>
-      <button>About</button>
-      <button>Pricing</button>
-      <button>Reviews</button>
-      <button>Contact</button>
+  <nav>
+    <div class="nav-content">
+      <img src="app/images/CCHS.svg" alt="Cheshire County Hygiene Services logo">
+      <div class="nav-buttons">
+        <button type="button">Features</button>
+        <button type="button">About</button>
+        <button type="button">Pricing</button>
+        <button type="button">Reviews</button>
+        <button type="button">Contact</button>
+      </div>
     </div>
-  </div>
- </nav>
+  </nav>
+  <header>
+    <div class="header-container">
+      <div class="header-left">
+        <img src="app/images/CCHS.svg" alt="Cheshire County Hygiene Services logo">
+        <h1>
+          Explained propriety<br> of out perpetual to you
+        </h1>
+        <hr>
+        <p>
+          Insipidity the sufficient discretion imprudence resolution sir him decisively. Proceed how any engaged
+          visitor.
+          Explained propriety of out perpetual his you. Feel sold off felt nay rose met you. We so entreaties cultivated
+          astonished is.
+        </p>
+        <button type="button">DOWNLOAD</button>
+      </div>
+      <form action="#">
+        <div><p>Try Your <span>FREE</span> Trial Today</p></div>
+        <legend>Your details</legend>
+        <input class="contactInput" type="text" id="firstName" required="true" placeholder="First name">
+        <input class="contactInput" type="text" id="lastName" required="true" placeholder="Last name">
+        <input class="contactInput" type="text" id="phoneNo" required="true" placeholder="Phone number">
+        <legend>Type of subscription</legend>
+        <div class="radio">
+          <input type="radio" id="monthly" name="typeOfSubcription" value="monthly" checked required="true"/>
+          <label for="monthly">MONTHLY</label>
+          <input type="radio" id="yearly" name="typeOfSubcription" value="yearly" required="true"/>
+          <label for="yearly">YEARLY</label>
+        </div>
+        <button type="submit">GET STARTED</button>
+      </form>
+    </div>
+  </header>
 </body>
+
 </html>
