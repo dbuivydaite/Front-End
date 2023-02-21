@@ -1,0 +1,63 @@
+// Šriftas paimtas iš užduoties
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+//Turinio max. plotis paimtas iš užduoties susumuojant elementų pločius
+$maxWidth: 1100px;
+// Tamsiai pilka bus naudojama keliose vietose
+$colorDarkGrey: #1C1C1C;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+nav {
+  background-color: $colorDarkGrey;
+  height: 72px;
+  // Kad suspaudus liktų tarpelis iš kairės ir dešinės
+  padding: 0 20px;
+
+  .nav-content {
+    display: flex;
+    // Logotimas į kairę, mygtukų blokas - į dešinę
+    justify-content: space-between;
+    // Turlnys vertikaliai per vidurį
+    align-items: center;
+    // Navigacijos bloką išcentruoja horizontaliai
+    margin: auto;
+    // Aušktis kaip ir <nav>
+    height: 100%;
+    // Max plotis per kitnamąjį
+    max-width: $maxWidth;
+  }
+
+  .nav-buttons {
+    //Kai turi kur plėstik, kad liktų kairėje bet prasiplėtę
+    min-width: 40%;
+    //aukštis kaip ir konteinerio. Realiai bus reikalinga raudonam apatiniam borderiui
+    height: 100%;
+    display: flex;
+    //Mygtukai atskirti tarpais konteineryje
+    justify-content: space-between;
+    //Min tarpai suspaudus
+    gap: 10px;
+
+    button {
+      color: white;
+      //Papilkiname tekstą jei neužeita
+      opacity: 0.69;
+      background-color: $colorDarkGrey;
+      // Nematomi borderiai viršuje ir apačioje. Išlaiko teksto vertikalų centraviną ir vienodą aukštį kai užeinama su pele
+      border-width: 3px 0;
+      border-color: #e2786600;
+
+      &:hover {
+        // teksto spalva ryškiai balta
+        opacity: 1;
+        //apatinis borderis paraudonuoja.
+        border-bottom: 3px solid #E27866;
+      }
+    }
+  }
+}
