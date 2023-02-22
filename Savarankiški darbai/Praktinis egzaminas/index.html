@@ -41,17 +41,21 @@
       </div>
       <form action="#">
         <div><p>Try Your <span>FREE</span> Trial Today</p></div>
-        <legend>Your details</legend>
-        <input class="contactInput" type="text" id="firstName" required="true" placeholder="First name">
-        <input class="contactInput" type="text" id="lastName" required="true" placeholder="Last name">
-        <input class="contactInput" type="text" id="phoneNo" required="true" placeholder="Phone number">
-        <legend>Type of subscription</legend>
-        <div class="radio">
-          <input type="radio" id="monthly" name="typeOfSubcription" value="monthly" checked required="true"/>
-          <label for="monthly">MONTHLY</label>
-          <input type="radio" id="yearly" name="typeOfSubcription" value="yearly" required="true"/>
-          <label for="yearly">YEARLY</label>
-        </div>
+        <fieldset>
+          <legend>Your details</legend>
+          <input class="contactInput" type="text" id="firstName" name="firstName" required="true" placeholder="First name">
+          <input class="contactInput" type="text" id="lastName" name="lastName" rrequired="true" placeholder="Last name">
+          <input class="contactInput" type="tel" id="phoneNo" name="phoneNo" required="true" placeholder="Phone number">
+        </fieldset>
+        <fieldset>
+          <legend>Type of subscription</legend>
+          <div class="radio">
+            <input type="radio" id="monthly" name="typeOfSubcription" value="monthly" checked required="true"/>
+            <label for="monthly">MONTHLY</label>
+            <input type="radio" id="yearly" name="typeOfSubcription" value="yearly" required="true"/>
+            <label for="yearly">YEARLY</label>
+          </div>
+        </fieldset>
         <button type="submit">GET STARTED</button>
       </form>
     </div>
