@@ -128,7 +128,9 @@ header {
     min-width: 260px;
     border-radius: 5px;
     background-color: white;
-    max-height: 426px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     div {
       background-color: #F5F5F5;
