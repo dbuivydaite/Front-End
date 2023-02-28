@@ -75,7 +75,7 @@ nav {
 }
 
 header {
-  height: 640px;
+  min-height: 640px;
   background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63)), center url("../images/City.jpg");
   background-size: cover;
   color: white;
@@ -219,44 +219,175 @@ header {
 }
 
 section.socialMedia {
-  display: flex;
-  justify-content: space-between;
-  // Turlnys vertikaliai per vidurį
-  align-items: center;
-  // Navigacijos bloką išcentruoja horizontaliai
-  margin: auto;
-  // Max plotis per kitnamąjį
-  max-width: $maxWidth;
-  height: 105px;
   padding: 0 20px;
 
-  .socialDesc {
-    //Pagal specifikaciją
-    max-width: 400px;
-    //Kai trūksta pločio, kad išlaikyti atstumą iki FB logo.
-    margin-right: 30px;
-
-    h3 {
-      font-size: 20px;
-    }
-  
-    p {
-      font-size: 14px;
-    }
-  }
-
-  .scialIcons {
-    //Soc. ikonų konteineris plečiasi ir užima likusį plotį
-    flex-grow: 2;
-    //kai yra pakankamai pločio, kad FB ikona neatsiremtų į tekstą kairėje
-    max-width: 550px;
+  .socialMedia-container {
     display: flex;
     justify-content: space-between;
-  }
+    // Turlnys vertikaliai per vidurį
+    align-items: center;
+    // Navigacijos bloką išcentruoja horizontaliai
+    margin: auto;
+    // Max plotis per kitnamąjį
+    max-width: $maxWidth;
+    height: 105px;
 
-  img {
-    //Pagal specifikaciją
-    height: 30px;
+
+    .socialDesc {
+      //Pagal specifikaciją
+      max-width: 400px;
+      //Kai trūksta pločio, kad išlaikyti atstumą iki FB logo.
+      margin-right: 30px;
+
+      h3 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .socialIcons {
+      //Soc. ikonų konteineris plečiasi ir užima likusį plotį
+      flex-grow: 2;
+      //kai yra pakankamai pločio, kad FB ikona neatsiremtų į tekstą kairėje
+      max-width: 550px;
+      display: flex;
+      justify-content: space-between;
+      //suspaudus kad nesusilietų ikonos
+      gap: 10px;
+
+    }
+
+    img {
+      //Pagal specifikaciją
+      height: 30px;
+    }
+  }
+}
+
+.featuresPanel1 {
+  min-height: 640px;
+  background: linear-gradient(270deg, rgba(102, 149, 226, 0.42) 0%, rgba(226, 120, 102, 0.42) 100%), bottom url("../images/desert.jpg");
+  background-size: cover;
+  color: white;
+  display: flex;
+  // Kad suspaudus liktų tarpelis iš kairės ir dešinės
+  padding: 0 20px;
+
+  .featuresPanel1-container {
+    display: flex;
+    width: $maxWidth;
+    // min-height: 425px; //pabandyti istrinti veliau
+    justify-content: space-between;
+    margin: auto;
+
+    .tab-buttons {
+      display: grid;
+      gap: 21px;
+
+      input {
+        display: none;
+      }
+
+      label {
+        width: 100px;
+        height: 100px;
+        display: grid;
+        background-color: #A37169;
+        color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0px 3px 6px #00000029;
+
+        p {
+          margin: auto;
+          transform: rotate(-45deg);
+          font-size: 14px;
+        }
+      }
+
+      input:checked+label {
+        background-color: #E27866;
+        color: white;
+        font-weight: bold;
+        transition: .4s ease;
+      }
+
+      // &>* {
+      //   border: 2px solid red;
+      // }
+    }
+
+    $imageBorder: 170px;
+
+    .tab {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: auto $imageBorder $imageBorder;
+      grid-template-rows: $imageBorder $imageBorder;
+      grid-template-areas:
+        "text image1 image2"
+        "text image3 image3";
+
+      article {
+        padding: 0 50px;
+        grid-area: text;
+        align-self: center;
+
+        h1 {
+          padding: 0 0 30px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      .img {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "Explore";
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          text-align: center;
+          text-shadow: 1px 1px 2px black;
+          font-size: 20px;
+          line-height: 170px;
+          background-color: rgba(226, 120, 102, 0.7);
+          opacity: 0;
+          transition: opacity .4s;
+        }
+
+        &:hover::before {
+          opacity: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &:nth-of-type(1) {
+          grid-area: image1;
+        }
+
+        &:nth-of-type(2) {
+          grid-area: image2;
+        }
+
+        &:nth-of-type(3) {
+          grid-area: image3;
+          width: 100%;
+        }
+
+      }
+    }
   }
 }
 
@@ -282,7 +413,7 @@ section.socialMedia {
     //   border: 1px solid red;
     // }
   }
-  
+
   .logo {
     height: 170px;
     width: 50%;
@@ -328,8 +459,41 @@ section.socialMedia {
     border-radius: 50%;
     margin-right: 20px;
   }
+
   h5 {
     font-size: 14px;
     font-weight: bold;
+  }
+}
+
+footer {
+  background-color: $colorDarkGrey;
+
+  .footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // Navigacijos bloką išcentruoja horizontaliai
+    margin: auto;
+    // Max plotis per kitnamąjį
+    max-width: $maxWidth;
+    height: 124px;
+    padding: 0 20px;
+
+    .footer-social-icons {
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+    }
+
+    img {
+      //Pagal specifikaciją
+      height: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.5);
+    }
   }
 }

@@ -40,19 +40,23 @@
         <button type="button">DOWNLOAD</button>
       </div>
       <form action="#">
-        <div><p>Try Your <span>FREE</span> Trial Today</p></div>
+        <div>
+          <p>Try Your <span>FREE</span> Trial Today</p>
+        </div>
         <fieldset>
           <legend>Your details</legend>
-          <input class="contactInput" type="text" id="firstName" name="firstName" required="true" placeholder="First name">
-          <input class="contactInput" type="text" id="lastName" name="lastName" rrequired="true" placeholder="Last name">
+          <input class="contactInput" type="text" id="firstName" name="firstName" required="true"
+            placeholder="First name">
+          <input class="contactInput" type="text" id="lastName" name="lastName" rrequired="true"
+            placeholder="Last name">
           <input class="contactInput" type="tel" id="phoneNo" name="phoneNo" required="true" placeholder="Phone number">
         </fieldset>
         <fieldset>
           <legend>Type of subscription</legend>
           <div class="radio">
-            <input type="radio" id="monthly" name="typeOfSubcription" value="monthly" checked required="true"/>
+            <input type="radio" id="monthly" name="typeOfSubcription" value="monthly" checked required="true" />
             <label for="monthly">MONTHLY</label>
-            <input type="radio" id="yearly" name="typeOfSubcription" value="yearly" required="true"/>
+            <input type="radio" id="yearly" name="typeOfSubcription" value="yearly" required="true" />
             <label for="yearly">YEARLY</label>
           </div>
         </fieldset>
@@ -60,18 +64,74 @@
       </form>
     </div>
   </header>
-  <section  class="socialMedia">
-    <article class="socialDesc">
-      <h3>Social Media</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
-    </article>
-    <article class="scialIcons">
-      <a href="#"><img src="app/images/facebook-logo.svg" alt="Facebook logo"></a>
-      <a href="#"><img src="app/images/instagram-logo.svg" alt="Instagram logo"></a>
-      <a href="#"><img src="app/images/twitter.svg" alt="Twitter logo"></a>
-      <a href="#"><img src="app/images/pinterest.svg" alt="Pinterest logo"></a>
-      <a href="#"><img src="app/images/rss-logo.svg" alt="RSS feed logo"></a>
-    </article>
+  <section class="socialMedia">
+    <div class="socialMedia-container">
+      <article class="socialDesc">
+        <h3>Social Media</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+      </article>
+      <article class="socialIcons">
+        <a href="#"><img src="app/images/facebook-logo-semired.svg" alt="Facebook logo"></a>
+        <a href="#"><img src="app/images/instagram-logo-semired.svg" alt="Instagram logo"></a>
+        <a href="#"><img src="app/images/twitter-logo-semired.svg" alt="Twitter logo"></a>
+        <a href="#"><img src="app/images/pinterest-logo-semired.svg" alt="Pinterest logo"></a>
+        <a href="#"><img src="app/images/rss-logo-semired.svg" alt="RSS feed logo"></a>
+      </article>
+    </div>
+  </section>
+  <section class="featuresPanel1">
+    <div class="featuresPanel1-container">
+      <div class="tab-buttons">
+        <input type="radio" name="features1Tabs" value="register" id="tab1" />
+        <label for="tab1" class="tab1Label">
+          <p>REGISTER</p>
+        </label>
+        <input type="radio" name="features1Tabs" value="apply" id="tab2" />
+        <label for="tab2" class="tab2Label">
+          <p>APPLY</p>
+        </label>
+        <input type="radio" name="features1Tabs" value="receive" id="tab3" />
+        <label for="tab3" class="tab3Label">
+          <p>RECEIVE</p>
+        </label>
+      </div>
+      <div class="tab">
+        <article>
+          <h1>Tab1 with soft transitioning effect. Explained propriety of out perpetual his you.</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
+            dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+            penatibus et magnis dis parturient montes.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Aenean euismod bibendum laoreet.</p>
+        </article>
+        <div class="img"><img src="app/images/FP1img1.jpg" alt="Image1"></div>
+        <div class="img"><img src="app/images/FP1img2.jpg" alt="Image2"></div>
+        <div class="img"><img src="app/images/FP1img3.jpg" alt="Image3"></div>
+      </div>
+      <div class="tab">
+        <article>
+          <h1>Tab2 with soft transitioning effect. Explained propriety of out perpetual you.</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum laoreet. Proin gravida
+            dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+            penatibus et magnis dis parturient montes.<br><br>Lorem ipsum sit amet, consectetur adipiscing elit.
+            Aenean euismod bibendum laoreet.</p>
+        </article>
+        <div class="img"><img src="app/images/FP1img3.jpg" alt="Image3"></div>
+        <div class="img"><img src="app/images/FP1img1.jpg" alt="Image1"></div>
+        <div class="img"><img src="app/images/FP1img2.jpg" alt="Image2"></div>
+      </div>
+      <div class="tab">
+        <article>
+          <h1>Tab3 with soft transitioning effect. Explained propriety of perpetual his you.</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
+            dolor sit amet lacus accumsan et viverra commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+            penatibus et magnis dis parturient montes.<br><br>Lorem dolor sit amet, consectetur adipiscing elit.
+            Aenean euismod bibendum laoreet.</p>
+        </article>
+        <div class="img"><img src="app/images/FP1img2.jpg" alt="Image2"></div>
+        <div class="img"><img src="app/images/FP1img3.jpg" alt="Image3"></div>
+        <div class="img"><img src="app/images/FP1img1.jpg" alt="Image1"></div>
+      </div>
+    </div>
   </section>
   <section class="featuresPanel2">
     <div class="featuresPanel2-content">
@@ -79,7 +139,8 @@
       <article class="featuresPanel2-content-right">
         <h2>Erat tempor tempus<br>erat malesuada</h2>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor
+          sit amet lacus accumsan et viverra justo commodo.</p>
         <div class="listItem">
           <img class="icon" src="app/images/eye-icon.svg" alt="">
           <div>
@@ -91,13 +152,27 @@
           <img class="icon" src="app/images/comment-icon.svg" alt="">
           <div>
             <h5>Title</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
+              dolor sit amet lacus accumsan et viverra justo commodo.</p>
           </div>
         </div>
       </article>
     </div>
 
   </section>
+  <footer>
+    <section class="footer-social">
+      <article class="footer-social-icons">
+        <a href="#"><img src="app/images/facebook-logo-red.svg" alt="Facebook logo"></a>
+        <a href="#"><img src="app/images/instagram-logo-red.svg" alt="Instagram logo"></a>
+        <a href="#"><img src="app/images/twitter-logo-red.svg" alt="Twitter logo"></a>
+        <a href="#"><img src="app/images/pinterest-logo-red.svg" alt="Pinterest logo"></a>
+        <a href="#"><img src="app/images/rss-logo-red.svg" alt="RSS feed logo"></a>
+      </article>
+      <p>© 2019 Cheshire County</p>
+    </section>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
