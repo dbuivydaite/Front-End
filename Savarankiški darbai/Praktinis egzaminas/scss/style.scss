@@ -8,6 +8,8 @@ $colorRed: #E27866;
 $colorGreen: #41D395;
 //logotipo plotis. Kaikur teks dauginti iš daugiklio.
 $logoWidth: 120px;
+//featuresPanel1 paveiksliukų aukštis
+$imageBorder: 160px;
 
 * {
   padding: 0;
@@ -88,7 +90,7 @@ header {
   color: white;
   display: flex;
   // Kad suspaudus liktų tarpelis iš kairės ir dešinės
-  padding: 0 20px;
+  padding: 20px;
 
   .header-container {
     display: flex;
@@ -227,7 +229,7 @@ header {
 }
 
 section.socialMedia {
-  padding: 0 20px;
+  padding: 20px;
 
   .socialMedia-container {
     display: flex;
@@ -281,14 +283,16 @@ section.socialMedia {
   color: white;
   display: flex;
   // Kad suspaudus liktų tarpelis iš kairės ir dešinės
-  padding: 0 20px;
+  padding: 20px;
 
   .featuresPanel1-container {
     display: flex;
     width: $maxWidth;
     // min-height: 425px; //pabandyti istrinti veliau
     justify-content: space-between;
+    align-items: center;
     margin: auto;
+    gap: 55px;
 
     .tab-buttons {
       display: flex;
@@ -326,8 +330,6 @@ section.socialMedia {
       // }
     }
 
-    $imageBorder: 170px;
-
     .tab {
       display: grid;
       gap: 20px;
@@ -338,7 +340,8 @@ section.socialMedia {
         "text image3 image3";
 
       article {
-        padding: 0 50px;
+        // padding: 0 50px;
+        padding-right: 50px;
         grid-area: text;
         align-self: center;
 
@@ -365,7 +368,7 @@ section.socialMedia {
           text-align: center;
           text-shadow: 1px 1px 2px black;
           font-size: 20px;
-          line-height: 170px;
+          line-height: $imageBorder;
           background-color: rgba(226, 120, 102, 0.7);
           opacity: 0;
           transition: opacity .4s;
@@ -402,13 +405,13 @@ section.socialMedia {
 .featuresPanel2 {
   background-color: $colorDarkGrey;
   min-height: 596px;
-  padding: 0 20px;
+  padding: 20px;
   display: flex;
   // > * {
   //   border: 1px solid red;
   // }
 
-  .featuresPanel2-content {
+  .featuresPanel2-container {
     color: white;
     display: flex;
     align-items: center;
@@ -476,8 +479,12 @@ section.socialMedia {
 
 .about {
   min-height: 600px;
-  padding: 0 20px;
+  padding: 20px;
   display: flex;
+
+  // & * {
+  //   border: 1px solid red;
+  // }
 
   .about-container {
     width: $maxWidth;
@@ -488,6 +495,7 @@ section.socialMedia {
 
     hr {
       border-color: $colorRed;
+      border-style: solid;
       width: 64px;
       margin: 27px 0;
     }
@@ -504,7 +512,7 @@ section.socialMedia {
       row-gap: 30px;
       justify-content: space-evenly;
       // flex-wrap: wrap;
-      padding-top: 65px;
+      margin-top: 65px;
 
       // & > * {
       //   border: 1px solid red;
@@ -535,6 +543,185 @@ section.socialMedia {
 
 }
 
+.pricing {
+  min-height: 850px;
+  padding: 20px;
+  display: flex;
+  background-color: #6696E2;
+
+  // & * {
+  //   border: 1px solid red;
+  // }
+
+  .pricing-container {
+    width: $maxWidth;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+
+    hr {
+      border-color: $colorGreen;
+      border-style: solid;
+      width: 64px;
+      margin: 21px 0 26px;
+    }
+    p {
+      font-size: 14px;
+    }
+
+    .article-container {
+      width: 100%;
+      display: flex;
+      margin-top: 80px;
+      // column-gap: 100px;
+      // row-gap: 50px;
+      column-gap: 40px;
+      row-gap: 20px;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      article {
+        text-align: center;
+        // width: 250px;
+        flex: 1;
+        // flex-basis: 350px;
+
+        .upper {
+          background-color: #333;
+          padding: 15px;
+          border-radius: 5px 5px 0px 0px;
+          h3 {
+            font-size: 20px;
+            font-weight: normal;
+          }
+          .price {
+            font-size: 94px;
+            padding: 0px;
+
+            &::before {
+              content: "$";
+              font-size: 35px;
+            }
+          }
+          p {
+            opacity: 0.5;
+          }
+        }
+        .middle {
+          background-color: $colorGreen;
+          padding: 3px;
+          p {
+            padding: 8px 0px;
+          }
+        }
+        .lower {
+          background-color: white;
+          color: #86878B;
+          border-radius: 0px 0px 5px 5px;
+          P {
+            padding: 10px 0px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.contact {
+  background-color: $colorRed;
+  min-height: 570;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  align-items: center;
+
+  h1 {
+    padding: 20px 0 50px;
+  }
+  p {
+    font-size: 14px;
+  }
+
+  // & * {
+  //   border: 1px solid red;
+  // }
+
+  form {
+    margin-top: 25px;
+    padding: 10px 65px 30px;
+    width: 390px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 6px #00000029;
+
+    fieldset {
+      border: none;
+    }
+
+    .contactInput {
+      font-size: 12px;
+      line-height: 24px;
+      display: block;
+      border-width: 0 0 1px 0;
+      border-color: #D8D8D8;
+      margin: 23px auto 0 auto;
+      width: 100%;
+
+      &::placeholder {
+        color: $colorDarkGrey;
+        padding-left: 10px;
+      }
+    }
+
+    input[type="radio"] {
+      accent-color: #2fa775;
+
+      &:checked+label {
+        opacity: 1;
+      }
+    }
+
+    label {
+      color: black;
+      opacity: 0.5;
+      font-weight: bold;
+      font-size: 9px;
+    }
+
+    .radio {
+      width: 100%;
+      display: flex;
+      padding-left: 10px;
+      margin: 25px 0 35px;
+      gap: 4px;
+
+      label:first-of-type {
+        margin-right: 15px;
+      }
+    }
+
+    button {
+      width: 160px;
+      height: 50px;
+      color: white;
+      background-color: $colorGreen;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 5px;
+      align-self: center;
+    }
+  }
+}
+
 footer {
   background-color: $colorDarkGrey;
 
@@ -547,7 +734,7 @@ footer {
     // Max plotis per kitnamąjį
     max-width: $maxWidth;
     height: 124px;
-    padding: 0 20px;
+    padding: 30px 20px;
 
     .footer-social-icons {
       display: flex;
@@ -567,18 +754,51 @@ footer {
   }
 }
 
+@media (max-width: 1100px) {
+  .featuresPanel1-container {
+    .tab {
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .featuresPanel1-container {
+    .tab {
+      h1 {
+        font-size: 20px;
+        padding: 0px 0px 10px !important;
+      }
+      grid-template-columns: auto auto auto !important;//$imageBorder $imageBorder $imageBorder !important;
+      grid-template-rows: auto $imageBorder !important;
+      grid-template-areas:
+        "text text text"
+        "image1 image2 image3" !important;
+        article {
+          padding-right: 0 !important;
+        }
+    }
+  }
+  .featuresPanel2-container {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
     align-items: center;
-    padding: 40px 0;
 
     .header-left {
       align-items: center;
       min-height: 400px;
+
       img {
         width: calc($logoWidth * 1.5);
       }
+
       h1 {
         font-size: 26px;
       }
@@ -587,9 +807,8 @@ footer {
 
   .socialMedia-container {
     flex-direction: column;
-    padding: 30px 0;
 
-    & > * {
+    &>* {
       min-width: 100%;
     }
   }
@@ -597,19 +816,28 @@ footer {
   .featuresPanel1-container {
     flex-direction: column;
     padding: 30px 0;
+    gap: 20px !important;
 
     .tab-buttons {
       flex-direction: row !important;
-    }
 
+      label > p {
+        transform: rotate( 0deg) !important;
+      }
+
+      & > * {
+        height: 40px !important;
+      }
+    }
   }
 
   .about {
     .about-container {
-      padding: 40px 0;
+
       h1 {
         font-size: 30px;
       }
+
       hr {
         margin: 10px 0;
       }
@@ -621,6 +849,22 @@ footer {
         article h3 {
           padding: 10px 0 10px;
         }
+      }
+    }
+  }
+  .footer-social {
+    flex-direction: column;
+  }
+
+  .pricing .pricing-container .article-container {
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    // justify-content: center;
+    article {
+      width: 300px;
+      .lower p {
+        padding: 5px 0px;
       }
     }
   }
