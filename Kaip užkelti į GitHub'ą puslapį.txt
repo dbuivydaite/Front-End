@@ -1,0 +1,7 @@
+Create new repository
+upload an existing file
+Commit changes
+settings
+Pages
+pasirinkti branch main, save
+Actions
