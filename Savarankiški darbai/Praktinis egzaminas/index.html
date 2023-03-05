@@ -7,20 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cheshire County Hygiene Services</title>
   <link rel="icon" type="image/x-icon" href="app/images/CCHS_logo.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="app/css/style.css">
 </head>
-
 <body>
   <nav>
     <div class="nav-content">
-      <img src="app/images/CCHS.svg" alt="Cheshire County Hygiene Services logo">
-      <div class="nav-buttons">
-        <button type="button">Features</button>
-        <button type="button">About</button>
-        <button type="button">Pricing</button>
-        <button type="button">Reviews</button>
-        <button type="button">Contact</button>
+      <a href="#"><img src="app/images/CCHS.svg" alt="Cheshire County Hygiene Services logo"></a>
+      <div class="links">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
       </div>
+      <i id="burger" class="fa-solid fa-bars"></i>
     </div>
   </nav>
   <header>
@@ -64,7 +68,7 @@
       </form>
     </div>
   </header>
-  <section class="socialMedia">
+  <div class="socialMedia">
     <div class="socialMedia-container">
       <article class="socialDesc">
         <h3>Social Media</h3>
@@ -78,8 +82,8 @@
         <a href="#"><img src="app/images/rss-logo-semired.svg" alt="RSS feed logo"></a>
       </article>
     </div>
-  </section>
-  <section class="featuresPanel1">
+  </div>
+  <section id="features" class="featuresPanel1">
     <div class="featuresPanel1-container">
       <div class="tab-buttons">
         <input type="radio" name="features1Tabs" value="register" id="tab1" />
@@ -133,7 +137,7 @@
       </div>
     </div>
   </section>
-  <section class="featuresPanel2">
+  <div class="featuresPanel2">
     <div class="featuresPanel2-container">
       <img class="logo" src="app/images/CCHS.svg" alt="Cheshire County Hygiene Services logo">
       <article class="featuresPanel2-content-right">
@@ -158,8 +162,8 @@
         </div>
       </article>
     </div>
-  </section>
-  <section class="about">
+  </div>
+  <section id="about" class="about">
     <div class="about-container">
       <h1>WHY THIS IS AWESOME</h1>
       <hr>
@@ -183,7 +187,7 @@
       </div>
     </div>
   </section>
-  <section class="pricing">
+  <section id="pricing" class="pricing">
     <div class="pricing-container">
       <h1>PRICING OPTIONS</h1>
       <hr>
@@ -244,127 +248,161 @@
       </div>
     </div>
   </section>
-  <section class="reviews">
+  <section id="reviews" class="reviews">
     <div class="reviews-container">
       <h1>WHAT OUR CUSTOMERS ARE SAYING</h1>
       <hr>
-      <div class="article-container">
-        <article>
-          <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
-            repellat similique odio aspernatur ex.</p>
-          <img src="app/images/avatar1.jpg" alt="avatar1">
-          <div class="reviewer">
-            <p class="name">Jeremy H.</p>
-            <p class="title">Manager</p>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <article>
+              <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
+                repellat similique odio aspernatur ex.</p>
+              <img src="app/images/avatar1.jpg" alt="avatar1">
+              <div class="reviewer">
+                <p class="name">Jeremy H.</p>
+                <p class="title">Manager</p>
+              </div>
+            </article>
           </div>
-        </article>
-        <article>
-          <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
-          <img src="app/images/avatar1.jpg" alt="avatar1">
-          <div class="reviewer">
-            <p class="name">John S.</p>
-            <p class="title">Freelancer</p>
+          <div class="swiper-slide">
+            <article>
+              <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.
+              </p>
+              <img src="app/images/avatar1.jpg" alt="avatar1">
+              <div class="reviewer">
+                <p class="name">John S.</p>
+                <p class="title">Freelancer</p>
+              </div>
+            </article>
           </div>
-        </article>
-        <article>
-          <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
-            repellat similique odio aspernatur ex.</p>
-          <img src="app/images/avatar1.jpg" alt="avatar1">
-          <div class="reviewer">
-            <p class="name">Susan W.</p>
-            <p class="title">Photographer</p>
+          <div class="swiper-slide">
+            <article>
+              <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
+                repellat similique odio aspernatur ex.</p>
+              <img src="app/images/avatar1.jpg" alt="avatar1">
+              <div class="reviewer">
+                <p class="name">Susan W.</p>
+                <p class="title">Photographer</p>
+              </div>
+            </article>
           </div>
-        </article>
-        <article>
-          <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
-            repellat similique odio aspernatur ex.</p>
-          <img src="app/images/avatar2.jpg" alt="avatar2">
-          <div class="reviewer">
-            <p class="name">Jeremy H.</p>
-            <p class="title">Manager</p>
+          <div class="swiper-slide">
+            <article>
+              <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
+                repellat similique odio aspernatur ex.</p>
+              <img src="app/images/avatar2.jpg" alt="avatar2">
+              <div class="reviewer">
+                <p class="name">Jeremy H.</p>
+                <p class="title">Manager</p>
+              </div>
+            </article>
           </div>
-        </article>
-        <article>
-          <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
-          <img src="app/images/avatar2.jpg" alt="avatar2">
-          <div class="reviewer">
-            <p class="name">John S.</p>
-            <p class="title">Freelancer</p>
+          <div class="swiper-slide">
+            <article>
+              <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.
+              </p>
+              <img src="app/images/avatar2.jpg" alt="avatar2">
+              <div class="reviewer">
+                <p class="name">John S.</p>
+                <p class="title">Freelancer</p>
+              </div>
+            </article>
           </div>
-        </article>
-        <article>
-          <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
-            repellat similique odio aspernatur ex.</p>
-          <img src="app/images/avatar2.jpg" alt="avatar2">
-          <div class="reviewer">
-            <p class="name">Susan W.</p>
-            <p class="title">Photographer</p>
+          <div class="swiper-slide">
+            <article>
+              <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
+                repellat similique odio aspernatur ex.</p>
+              <img src="app/images/avatar2.jpg" alt="avatar2">
+              <div class="reviewer">
+                <p class="name">Susan W.</p>
+                <p class="title">Photographer</p>
+              </div>
+            </article>
           </div>
-        </article>
-        <article>
-          <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
-            repellat similique odio aspernatur ex.</p>
-          <img src="app/images/avatar3.jpg" alt="avatar3">
-          <div class="reviewer">
-            <p class="name">Jeremy H.</p>
-            <p class="title">Manager</p>
+          <div class="swiper-slide">
+            <article>
+              <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
+                repellat similique odio aspernatur ex.</p>
+              <img src="app/images/avatar3.jpg" alt="avatar3">
+              <div class="reviewer">
+                <p class="name">Jeremy H.</p>
+                <p class="title">Manager</p>
+              </div>
+            </article>
           </div>
-        </article>
-        <article>
-          <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
-          <img src="app/images/avatar3.jpg" alt="avatar3">
-          <div class="reviewer">
-            <p class="name">John S.</p>
-            <p class="title">Freelancer</p>
+          <div class="swiper-slide">
+            <article>
+              <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.
+              </p>
+              <img src="app/images/avatar3.jpg" alt="avatar3">
+              <div class="reviewer">
+                <p class="name">John S.</p>
+                <p class="title">Freelancer</p>
+              </div>
+            </article>
           </div>
-        </article>
-        <article>
-          <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
-            repellat similique odio aspernatur ex.</p>
-          <img src="app/images/avatar3.jpg" alt="avatar3">
-          <div class="reviewer">
-            <p class="name">Susan W.</p>
-            <p class="title">Photographer</p>
+          <div class="swiper-slide">
+            <article>
+              <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
+                repellat similique odio aspernatur ex.</p>
+              <img src="app/images/avatar3.jpg" alt="avatar3">
+              <div class="reviewer">
+                <p class="name">Susan W.</p>
+                <p class="title">Photographer</p>
+              </div>
+            </article>
           </div>
-        </article>
-        <article>
-          <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
-            repellat similique odio aspernatur ex.</p>
-          <img src="app/images/avatar4.jpg" alt="avatar4">
-          <div class="reviewer">
-            <p class="name">Jeremy H.</p>
-            <p class="title">Manager</p>
+          <div class="swiper-slide">
+            <article>
+              <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
+                repellat similique odio aspernatur ex.</p>
+              <img src="app/images/avatar4.jpg" alt="avatar4">
+              <div class="reviewer">
+                <p class="name">Jeremy H.</p>
+                <p class="title">Manager</p>
+              </div>
+            </article>
           </div>
-        </article>
-        <article>
-          <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
-          <img src="app/images/avatar4.jpg" alt="avatar4">
-          <div class="reviewer">
-            <p class="name">John S.</p>
-            <p class="title">Freelancer</p>
+          <div class="swiper-slide">
+            <article>
+              <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.
+              </p>
+              <img src="app/images/avatar4.jpg" alt="avatar4">
+              <div class="reviewer">
+                <p class="name">John S.</p>
+                <p class="title">Freelancer</p>
+              </div>
+            </article>
           </div>
-        </article>
-        <article>
-          <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
-            repellat similique odio aspernatur ex.</p>
-          <img src="app/images/avatar4.jpg" alt="avatar4">
-          <div class="reviewer">
-            <p class="name">Susan W.</p>
-            <p class="title">Photographer</p>
+          <div class="swiper-slide">
+            <article>
+              <p class="review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita
+                repellat similique odio aspernatur ex.</p>
+              <img src="app/images/avatar4.jpg" alt="avatar4">
+              <div class="reviewer">
+                <p class="name">Susan W.</p>
+                <p class="title">Photographer</p>
+              </div>
+            </article>
           </div>
-        </article>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
-  <!-- <section class="contact">
+  <section id="contact" class="contact">
     <h1>CONTACT US</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <form action="#">
       <fieldset>
         <input class="contactInput" type="text" id="firstName" name="firstName" required="true"
           placeholder="First name">
-        <input class="contactInput" type="text" id="lastName" name="lastName" rrequired="true"
-          placeholder="Last name">
+        <input class="contactInput" type="text" id="lastName" name="lastName" rrequired="true" placeholder="Last name">
         <input class="contactInput" type="tel" id="phoneNo" name="phoneNo" required="true" placeholder="Phone number">
       </fieldset>
       <fieldset>
@@ -377,8 +415,8 @@
       </fieldset>
       <button type="submit">SEND</button>
     </form>
-  </section> -->
-  <!-- <footer>
+  </section>
+  <footer>
     <section class="footer-social">
       <article class="footer-social-icons">
         <a href="#"><img src="app/images/facebook-logo-red.svg" alt="Facebook logo"></a>
@@ -389,7 +427,8 @@
       </article>
       <p>© 2019 Cheshire County</p>
     </section>
-  </footer> -->
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 
