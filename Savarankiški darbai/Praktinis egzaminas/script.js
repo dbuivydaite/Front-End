@@ -48,11 +48,13 @@ const fp1tabs = document.getElementsByClassName("tab")
 
 // rodyti tabą pasirinktame indekse [0..index]
 function showTabAt(index) {
+    // pradžioje visus tabus paslepiame
     for (const tab of fp1tabs) {
         tab.style.display = "none"
     }
-    // Apsauga - jei tabų mygtukų daygiau nei pačių tabų, nebandyk rodyti neegzistuojančio tabo.
+    // Apsauga - jei tabų mygtukų daugiau nei pačių tabų, nebandyk rodyti neegzistuojančio tabo.
     if (index < fp1tabs.length) {
+        // Parodomr tik norimą tabą (pasiųstą per funkcijos parametrą)
         fp1tabs[index].style.display = "grid"
     }
 }
@@ -72,9 +74,9 @@ const swiper = new Swiper('.swiper', {
     loop: true,
 
     autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
+        delay: 5000, // suka kas 5s.
+        disableOnInteraction: false, //suk toliau, nesustok, nors ir pajudinau su pele.
+        pauseOnMouseEnter: true, //užejus pelei pristabdyk
     },
 
     // If we need pagination
@@ -82,7 +84,7 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
     },
 
-    breakpoints: {
+    breakpoints: { //panašiai kaip media - kas kiek pločio persijunk į kiek elementų
         480: {
             slidesPerView: 1,
             slidesPerGroup: 1,

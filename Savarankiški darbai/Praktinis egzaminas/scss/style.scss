@@ -18,11 +18,11 @@ $nav-height: 72px;
   margin: 0;
   box-sizing: border-box;
   font-family: Montserrat;
-  text-decoration: none;
+  text-decoration: none; //nuima pvz. pabraukimus nuo nuorodų.
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; //paspaudus nuorodą švelniai nuvažiuoja, ne staigiai peršoka.
 }
 
 // Ant ko rodyklė pasikeičia į rankutę
@@ -32,13 +32,14 @@ button,
   cursor: pointer;
 }
 
+//kur naudojamas h1, visur naudok nurodytą dydį.
 h1 {
   font-size: 36px;
 }
 
 body { //atitraukia turinį nuo viršaus kiek užstoja nav-bar'as
   margin-top: $nav-height;
-  & > * { // # nuorodos iš nav-bar'o jumpinus į jas pasislenka žemyn kiek užstoja nav-bar'as
+  & > * { // # nuorodos iš nav-bar'o šokant į jas pasislenka žemyn kiek užstoja nav-bar'as
     scroll-margin-top: $nav-height;
   }
 }
@@ -46,25 +47,20 @@ body { //atitraukia turinį nuo viršaus kiek užstoja nav-bar'as
 nav {
   background-color: $colorDarkGrey;
   height: $nav-height;
-  // Kad suspaudus liktų tarpelis iš kairės ir dešinės
-  padding: 0 20px;
+  padding: 0 20px; // Kad suspaudus liktų tarpelis iš kairės ir dešinės
+  // sekantys du nav-barą prikabina prie viršaus.
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 2; //kad scroolas palįstų po navbar, niekas neperetų virš.
 
   .nav-content {
     display: flex;
-    // Logotimas į kairę, mygtukų blokas - į dešinę
-    justify-content: space-between;
-    // Turlnys vertikaliai per vidurį
-    align-items: center;
-    // Navigacijos bloką išcentruoja horizontaliai
-    margin: auto;
-    // Aušktis kaip ir <nav>
-    height: 100%;
-    // Max plotis per kitnamąjį
-    max-width: $maxWidth;
+    justify-content: space-between; // Logotimas į kairę, mygtukų blokas - į dešinę
+    align-items: center; // Turlnys vertikaliai per vidurį
+    margin: auto; // Navigacijos bloką išcentruoja horizontaliai
+    height: 100%; // Aušktis kaip ir <nav>
+    max-width: $maxWidth; // Max plotis per kitnamąjį
 
     img {
       width: $logoWidth;
@@ -73,8 +69,7 @@ nav {
   }
 
   .links {
-    //Kai turi kur plėstis, kad liktų kairėje bet prasiplėtę
-    min-width: 40%;
+    min-width: 40%; //Kai turi kur plėstis, kad liktų kairėje bet prasiplėtę
     //aukštis kaip ir konteinerio. Realiai bus reikalinga raudonam apatiniam borderiui
     height: 100%;
     display: flex;
@@ -360,10 +355,6 @@ div.socialMedia {
         font-weight: bold;
         transition: .4s ease;
       }
-
-      // &>* {
-      //   border: 2px solid red;
-      // }
     }
 
     .tab {
@@ -376,7 +367,6 @@ div.socialMedia {
         "text image3 image3";
 
       article {
-        // padding: 0 50px;
         padding-right: 50px;
         grid-area: text;
         align-self: center;
@@ -432,7 +422,6 @@ div.socialMedia {
           grid-area: image3;
           width: 100%;
         }
-
       }
     }
   }
